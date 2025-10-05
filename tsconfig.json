@@ -1,0 +1,57 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    /*Module resolutions*/
+    "removeComments": true,
+    "moduleResolution": "node",             // resolve imports like Node
+    "esModuleInterop": true,                // allow default imports from CJS (e.g. express)
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": false,           // keep import/export syntax as written
+    
+    /*Project structure*/
+    "rootDir": "./src",                     // TS source code
+    "outDir": "./dist",                     // compiled JS output
+    "resolveJsonModule": true,              // if you import JSON files
+    "allowJs": false,                       // disallow raw .js files in src
+
+    /* Language and Environment */
+    // See also https://aka.ms/tsconfig/module
+    "target": "ES2022",                     // modern JS output
+    "lib": ["ES2022"],                      // features available
+    "module": "CommonJS",                   // still works best for Node.js + Express
+    "types": ["node"],                      // include Node.js types
+    "noEmitOnError": true,
+
+    /*Type checking Options*/
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strictNullChecks": true,
+
+    // Style Options
+    "noImplicitReturns": true,
+    "noImplicitOverride": false,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": false,
+    "noPropertyAccessFromIndexSignature": false,
+
+    // Recommended Options
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    
+    /* Debugging */
+    "sourceMap": true,                           // enable sourcemaps for debugging
+    "declaration": true,
+    "declarationMap": true,                      
+  },
+
+  "include": ["src"],                       // compile only src folder
+  "exclude": ["node_modules", "dist"]       // ignore these
+}

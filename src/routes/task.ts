@@ -207,6 +207,11 @@ taskRouter.delete('/:id', async (req: Request, res: Response): Promise<void> =>{
                 message: 'Internal Server Error',
                 error: err.message
             })
+        } else{
+            // Unknown error type
+            res.status(500).json({
+                message: 'An unknown error occurred'
+            })
         }
     }
 })

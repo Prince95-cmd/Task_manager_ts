@@ -1,18 +1,27 @@
 import express, {Request, Response, NextFunction} from 'express';
 import connectToMongoDB from './db';
+import passport from 'passport';
 import taskRouter from './routes/task';
+import authRouter from './routes/auth';
+import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import  './authentication/auth';
 
 dotenv.config();
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 connectToMongoDB();
 
 let PORT = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use('/tasks', taskRouter);
+
+app.use('/', authRouter);
+
+app.use('/tasks', passport.authenticate('jwt', {session: false}), taskRouter);
 
 interface AppError extends Error {
     status?: number

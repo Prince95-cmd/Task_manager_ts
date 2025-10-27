@@ -13,13 +13,14 @@
     "outDir": "./dist",                     // compiled JS output
     "resolveJsonModule": true,              // if you import JSON files
     "allowJs": false,                       // disallow raw .js files in src
+    "typeRoots": ["./src/types", "./node_modules/@types"],    // where to find type definitions                  
 
     /* Language and Environment */
     // See also https://aka.ms/tsconfig/module
     "target": "ES2022",                     // modern JS output
     "lib": ["ES2022"],                      // features available
     "module": "CommonJS",                   // still works best for Node.js + Express
-    "types": ["node"],                      // include Node.js types
+    "types": ["node", "express"],                      // include Node.js types
     "noEmitOnError": true,
 
     /*Type checking Options*/
@@ -52,6 +53,6 @@
     "declarationMap": true,                      
   },
 
-  "include": ["src"],                       // compile only src folder
+  "include": ["src/**/*"],                       // compile only src folder
   "exclude": ["node_modules", "dist"]       // ignore these
 }

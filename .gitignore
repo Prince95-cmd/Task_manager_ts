@@ -1,11 +1,11 @@
 # VSCode settings
-.vscode/
+.vscode/*
 
 # Node.js dependencies
-node_modules
+node_modules/
 
 # Environment variables
 .env
 
 # Build output
-dist
+dist/

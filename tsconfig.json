@@ -18,7 +18,7 @@
     /* Language and Environment */
     // See also https://aka.ms/tsconfig/module
     "target": "ES2022",                     // modern JS output
-    "lib": ["ES2022", "DOM"],                      // features available
+    "lib": ["ES2022"],                      // features available
     "module": "CommonJS",                   // still works best for Node.js + Express
     "types": ["node", "express"],                      // include Node.js types
     "noEmitOnError": true,
@@ -42,7 +42,6 @@
     "noPropertyAccessFromIndexSignature": false,
 
     // Recommended Options
-    "jsx": "react-jsx",
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",

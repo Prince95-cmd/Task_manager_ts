@@ -19,7 +19,7 @@ type VerifiedCallback = (error: unknown, user?: any, info?: any) => void;
 passport.use(
     new JWTStrategy(
         {
-            secretOrKey: process.env.JWT_SECRET_KEY, 
+            secretOrKey: process.env.JWT_SECRET_KEY!, 
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
        },
        async function(token: payLoad, done: VerifiedCallback){

@@ -13,7 +13,7 @@
     "outDir": "./dist",                     // compiled JS output
     "resolveJsonModule": true,              // if you import JSON files
     "allowJs": false,                       // disallow raw .js files in src
-    "typeRoots": ["./node_modules/@types"],    // where to find type definitions                  
+    "typeRoots": ["./node_modules/@types", "./src/types" ],    // where to find type definitions                  
 
     /* Language and Environment */
     // See also https://aka.ms/tsconfig/module

@@ -130,8 +130,8 @@ All protected routes require `Authorization: Bearer <token>` in headers.
 
 Middleware `(authMiddleware.ts)` verifies the token and attaches user info to `req.user`.
 
-🧪 Example Request
-Create Task `(POST /tasks)`
+🧪 Example Request  
+Create Task `(POST /tasks)`  
 Request Body
 
 ```json
@@ -158,11 +158,11 @@ Response
 }
 ```
 🧾 License
-This project is licensed under the MIT License.
+This project is licensed under the ............
 You are free to use, modify, and distribute it with attribution.
 
 👤 Author
-Prince Obiekezie
+Prince Obiekezie  
 📧 obiekezieprincec@gmail.com  
 🌐 https://github.com/Prince95-cmd
 

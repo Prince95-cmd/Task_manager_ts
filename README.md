@@ -72,21 +72,6 @@ JWT_SECRET=your_jwt_secret_key
 
 ---
 
-## ⚙️ Environment Variables
-
-Create a `.env` file in your root directory and add:
-
-PORT=4000  
-MONGODB_CONNECTION_URL=your_mongodb_connection_string  
-JWT_SECRET=your_jwt_secret_key
-
----
-
-## 🧩 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Prince95-cmd/Task_manager_ts.git
 Navigate to the project folder
 
 ```bash

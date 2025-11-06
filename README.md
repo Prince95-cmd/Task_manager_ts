@@ -55,8 +55,8 @@ It provides secure **user authentication and authorization** with **JWT**, along
 
 Create a `.env` file in your root directory and add:
 
-PORT=4000
-MONGODB_CONNECTION_URL=your_mongodb_connection_string
+PORT=4000  
+MONGODB_CONNECTION_URL=your_mongodb_connection_string  
 JWT_SECRET=your_jwt_secret_key
 
 
@@ -76,8 +76,8 @@ JWT_SECRET=your_jwt_secret_key
 
 Create a `.env` file in your root directory and add:
 
-PORT=4000
-MONGODB_CONNECTION_URL=your_mongodb_connection_string
+PORT=4000  
+MONGODB_CONNECTION_URL=your_mongodb_connection_string  
 JWT_SECRET=your_jwt_secret_key
 
 
@@ -121,21 +121,24 @@ npm start
 Server starts at:
 👉 `http://localhost:4000`
 
-🔗 API Endpoints
+🔗 API Endpoints  
 🔒 Authentication
-Method	Endpoint	Description	Access
-POST	`/signup`	Register a new user	Public
-POST	`/login`	Login user & get token	Public
+| Method | Endpoint | Description            |	Access  
+|--------|----------|------------------------|---------|
+| POST	|`/signup` | Register a new user    | Public |
+| POST	|`/login`  | Login user & get token | Public |
 
-📋 Tasks
-Method	Endpoint	Description	Access
-GET	`/tasks`	Get all tasks for user	Private
-GET	`/tasks/:id`	Get single task by ID	Private
-POST	`/tasks`	Create a new task	Private
-PUT	`/tasks/:id`	Update an existing task	Private
-DELETE `/tasks/:id`	Delete a task	Private
+📋 Tasks  
+Method	Endpoint	Description	Access  
+| Method | Endpoint      | Description               | Access  |
+|---------|----------------|---------------------------|----------|
+| GET     | /tasks         | Get all tasks for user    | Private |
+| GET     | /tasks/:id     | Get single task by ID     | Private |
+| POST    | /tasks         | Create a new task         | Private |
+| PUT     | /tasks/:id     | Update an existing task   | Private |
+| DELETE  | /tasks/:id     | Delete a task             | Private |  
 
-🔐 Authentication Flow
+🔐 Authentication Flow  
 User signs up with email, and password.
 
 Password is hashed using bcrypt and stored securely in MongoDB.
@@ -179,7 +182,7 @@ You are free to use, modify, and distribute it with attribution.
 
 👤 Author
 Prince Obiekezie
-📧 obiekezieprincec@gmail.com
+📧 obiekezieprincec@gmail.com  
 🌐 https://github.com/Prince95-cmd
 
 🛠️ To connect your frontend, include the JWT token in the request header under `Authorization: Bearer <token>` when making API calls.

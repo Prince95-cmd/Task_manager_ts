@@ -93,47 +93,47 @@ Copy code
    git clone https://github.com/Prince95-cmd/Task_manager_ts.git
 Navigate to the project folder
 
-bash
-Copy code
+```bash
 cd task_manager_api_ts
+```
 Install dependencies
 
-bash
-Copy code
+```bash
 npm install
+```
 Add your .env file (as shown above)
 
 🚀 Running the Server
 Development
 Runs TypeScript code directly using ts-node or tsc-watch.
 
-bash
-Copy code
+```bash
 npm run dev
+```
 Build (compile to JavaScript)
-bash
-Copy code
+```bash
 npm run build
+```
 Production
-bash
-Copy code
+```bash
 npm start
+```
 Server starts at:
-👉 http://localhost:4000
+👉 `http://localhost:4000`
 
 🔗 API Endpoints
 🔒 Authentication
 Method	Endpoint	Description	Access
-POST	/signup	Register a new user	Public
-POST	/login	Login user & get token	Public
+POST	`/signup`	Register a new user	Public
+POST	`/login`	Login user & get token	Public
 
 📋 Tasks
 Method	Endpoint	Description	Access
-GET	/tasks	Get all tasks for user	Private
-GET	/tasks/:id	Get single task by ID	Private
-POST	/tasks	Create a new task	Private
-PUT	/tasks/:id	Update an existing task	Private
-DELETE /tasks/:id	Delete a task	Private
+GET	`/tasks`	Get all tasks for user	Private
+GET	`/tasks/:id`	Get single task by ID	Private
+POST	`/tasks`	Create a new task	Private
+PUT	`/tasks/:id`	Update an existing task	Private
+DELETE `/tasks/:id`	Delete a task	Private
 
 🔐 Authentication Flow
 User signs up with email, and password.
@@ -142,25 +142,26 @@ Password is hashed using bcrypt and stored securely in MongoDB.
 
 On login, a JWT token is issued.
 
-All protected routes require Authorization: Bearer <token> in headers.
+All protected routes require `Authorization: Bearer <token>` in headers.
 
-Middleware (authMiddleware.ts) verifies the token and attaches user info to req.user.
+Middleware `(authMiddleware.ts)` verifies the token and attaches user info to `req.user`.
 
 🧪 Example Request
-Create Task (POST /tasks)
+Create Task `(POST /tasks)`
 Request Body
 
-json
-Copy code
+```json
+
 {
   "title": "Complete API documentation",
   "description": "Write README.md for Task Manager API",
   "duration": "1 day"
 }
+```
 Response
 
-json
-Copy code
+```json
+
 {
   "message": "Task created successfully",
   "task": {
@@ -171,6 +172,7 @@ Copy code
     "user": "671e3a5fbe76f2f823ddf001"
   }
 }
+```
 🧾 License
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute it with attribution.
@@ -180,7 +182,7 @@ Prince Obiekezie
 📧 obiekezieprincec@gmail.com
 🌐 https://github.com/Prince95-cmd
 
-🛠️ To connect your frontend, include the JWT token in the request header under Authorization: Bearer <token> when making API calls.
+🛠️ To connect your frontend, include the JWT token in the request header under `Authorization: Bearer <token>` when making API calls.
 
 
 

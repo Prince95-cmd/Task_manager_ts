@@ -158,7 +158,7 @@ Response
 }
 ```
 🧾 License
-This project is licensed under the ............
+This project is licensed under the ............  
 You are free to use, modify, and distribute it with attribution.
 
 👤 Author  

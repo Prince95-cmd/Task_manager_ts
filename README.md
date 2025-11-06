@@ -80,10 +80,6 @@ PORT=4000
 MONGODB_CONNECTION_URL=your_mongodb_connection_string  
 JWT_SECRET=your_jwt_secret_key
 
-
-yaml
-Copy code
-
 ---
 
 ## 🧩 Installation

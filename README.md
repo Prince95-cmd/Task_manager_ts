@@ -45,7 +45,7 @@ It provides secure **user authentication and authorization** with **JWT**, along
 
 ---
 
-## 📁 Project Structure
+
 
 
 
@@ -58,14 +58,128 @@ Create a `.env` file in your root directory and add:
 PORT=5000
 MONGODB_CONNECTION_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-TOKEN_EXPIRES_IN=1d
 
 
----
+
+
 
 ## 🧩 Installation
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/task-manager-api-ts.git
+
+
+
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in your root directory and add:
+
+PORT=4000
+MONGODB_CONNECTION_URL=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+
+
+
+
+## 🧩 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/task-manager-api-ts.git
+Navigate to the project folder
+
+
+cd task-manager-api-ts
+Install dependencies
+
+
+npm install
+Add your .env file (as shown above)
+
+🚀 Running the Server
+Development
+Runs TypeScript code directly using ts-node or tsc-watch.
+
+
+npm run dev
+Build (compile to JavaScript)
+bash
+Copy code
+npm run build
+Production
+bash
+Copy code
+npm start
+Server starts at:
+👉 http://localhost:5000
+
+🔗 API Endpoints
+🔒 Authentication
+Method	Endpoint	Description	Access
+POST	/api/auth/signup	Register a new user	Public
+POST	/api/auth/login	Login user & get token	Public
+
+📋 Tasks
+Method	Endpoint	Description	Access
+GET	/api/tasks	Get all tasks for user	Private
+GET	/api/tasks/:id	Get single task by ID	Private
+POST	/api/tasks	Create a new task	Private
+PUT	/api/tasks/:id	Update an existing task	Private
+DELETE	/api/tasks/:id	Delete a task	Private
+
+🔐 Authentication Flow
+User signs up with name, email, and password.
+
+Password is hashed using bcrypt and stored securely in MongoDB.
+
+On login, a JWT token is issued.
+
+All protected routes require Authorization: Bearer <token> in headers.
+
+Middleware (authMiddleware.ts) verifies the token and attaches user info to req.user.
+
+🧪 Example Request
+Create Task (POST /api/tasks)
+
+Request Body
+
+
+{
+  "title": "Complete API documentation",
+  "description": "Write README.md for Task Manager API",
+  "completed": false
+}
+
+Response
+
+{
+  "message": "Task created successfully",
+  "task": {
+    "_id": "671e3a9dbe76f2f823ddf004",
+    "title": "Complete API documentation",
+    "description": "Write README.md for Task Manager API",
+    "completed": false,
+    "user": "671e3a5fbe76f2f823ddf001"
+  }
+}
+🧾 License
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it with attribution.
+
+👤 Author
+Prince Obiekezie
+📧 your.email@example.com
+🌐 GitHub Profile
+
+🛠️ To connect your frontend, include the JWT token in the request header under Authorization: Bearer <token> when making API calls.
+
+
+
+
+
+
+
+
 

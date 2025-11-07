@@ -45,12 +45,6 @@ It provides secure **user authentication and authorization** with **JWT**, along
 
 ---
 
-
-
-
-
----
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file in your root directory and add:

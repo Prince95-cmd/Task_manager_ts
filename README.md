@@ -8,7 +8,6 @@ It provides secure **user authentication and authorization** with **JWT**, along
 ## 📚 Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
 - [Installation](#installation)
 - [Running the Server](#running-the-server)

@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const saltRounds = parseInt(process.env.SALT_ROUNDS || '10', 10);
+const saltRounds : number = parseInt(process.env.SALT_ROUNDS || '10', 10);
 
 
 

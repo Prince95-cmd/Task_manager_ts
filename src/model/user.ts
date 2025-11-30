@@ -37,7 +37,7 @@ async function hashPassword(this: IUserDocument): Promise<void>{
         return;
     }
     // Hash the password with a salt round of 10
-    const hash = await bcrypt.hash(user.password,saltRounds);
+    const hash = await bcrypt.hash(user.password, saltRounds);
     user.password = hash;
 }
 

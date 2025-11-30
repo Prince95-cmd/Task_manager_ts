@@ -52,6 +52,6 @@
     "declarationMap": true,                      
   },
 
-  "include": ["src/**/*", "src/types/**/*.d.ts"],                       // compile only src folder
-  "exclude": ["node_modules", "dist"]       // ignore these
+  "include": ["src/**/*", "src/types/**/*.d.ts"],            // compile only src folder
+  "exclude": ["node_modules", "dist"]                        // ignore these
 }
